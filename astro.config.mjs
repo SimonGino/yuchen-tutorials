@@ -2,8 +2,11 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   site: 'https://learn.yuchen.dev',
+
   integrations: [
     starlight({
       title: {
@@ -33,4 +36,6 @@ export default defineConfig({
       plugins: [starlightImageZoom()],
     }),
   ],
+
+  adapter: cloudflare(),
 });
