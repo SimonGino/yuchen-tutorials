@@ -7,8 +7,8 @@ export default defineConfig({
   integrations: [
     starlight({
       title: {
-        'zh-CN': '宇辰AI编程 · 教程',
-        en: 'YuChen AI · Tutorials',
+        'zh-CN': '宇辰AI编程',
+        en: 'YuChen AI',
       },
       defaultLocale: 'root',
       locales: {
