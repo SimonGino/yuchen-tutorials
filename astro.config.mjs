@@ -27,6 +27,9 @@ export default defineConfig({
           autogenerate: { directory: 'openclaw' },
         },
       ],
+      components: {
+        SocialIcons: './src/components/CustomSocialIcons.astro',
+      },
       plugins: [starlightImageZoom()],
     }),
   ],
