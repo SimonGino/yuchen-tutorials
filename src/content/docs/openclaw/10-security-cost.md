@@ -2,7 +2,7 @@
 title: 安全与成本：防火墙、降本、用量监控
 description: 安全防护、成本控制和监控配置
 sidebar:
-  order: 9
+  order: 10
 ---
 
 ## 本节目标
@@ -200,4 +200,4 @@ openclaw health
 
 安全和成本都控好了，最后一个模块是排错手册：
 
-- [10-排错手册](/openclaw/10-troubleshooting/)：按症状索引，10 分钟收敛问题
+- [11-排错手册](/openclaw/11-troubleshooting/)：按症状索引，10 分钟收敛问题

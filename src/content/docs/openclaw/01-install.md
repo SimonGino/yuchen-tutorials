@@ -228,7 +228,7 @@ openclaw dashboard
 
 **验证方式**：在任一对话入口发送"你好"，收到回复就说明最小链路已通。
 
-外部渠道（Telegram / 飞书 / 微信 / 浏览器）的接入在 [03-渠道接入](/openclaw/03-channel/) 中展开。
+外部渠道（Telegram / 飞书 / 微信）的接入在 [03-渠道接入](/openclaw/03-channel/) 中展开。
 
 ---
 
@@ -289,4 +289,4 @@ openclaw daemon restart  # 尝试重启
 安装完成，Gateway 在跑，能通过 TUI 或 Dashboard 对话了。接下来：
 
 - [02-模型接入](/openclaw/02-model/)：配置云端模型、本地模型（Ollama）、中转站
-- [03-渠道接入](/openclaw/03-channel/)：接入 Telegram / 飞书 / 微信 / 浏览器
+- [03-渠道接入](/openclaw/03-channel/)：接入 Telegram / 飞书 / 微信

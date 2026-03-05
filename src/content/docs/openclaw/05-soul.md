@@ -2,7 +2,7 @@
 title: 身份与人格：Soul 定义与语气调教
 description: 配置助手身份、语气和行为规则
 sidebar:
-  order: 4
+  order: 5
 ---
 
 ## 本节目标
@@ -154,4 +154,4 @@ openclaw daemon restart
 
 身份定了，接下来让助手拥有跨会话记忆：
 
-- [05-记忆管理](/openclaw/05-memory/)：记忆机制、治理与清理
+- [06-记忆管理](/openclaw/06-memory/)：记忆机制、治理与清理

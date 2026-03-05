@@ -79,14 +79,15 @@ sidebar:
 |------|------|
 | [01-安装](/openclaw/01-install/) | 三种安装路线，20 分钟跑通 |
 | [02-模型接入](/openclaw/02-model/) | 云端、本地、中转站配置 |
-| [03-渠道接入](/openclaw/03-channel/) | Telegram / 飞书 / 微信 / 浏览器 |
-| [04-身份与人格](/openclaw/04-soul/) | Soul 定义与语气调教 |
-| [05-记忆管理](/openclaw/05-memory/) | 记忆机制、治理与清理 |
-| [06-Skills 管理](/openclaw/06-skills/) | 内置、自定义与治理 |
-| [07-多 Agent 协作](/openclaw/07-multi-agent/) | 子 Agent、角色分工 |
-| [08-定时任务与自动化](/openclaw/08-automation/) | 晨报 Digest、信息收集 |
-| [09-安全与成本](/openclaw/09-security-cost/) | 防火墙、降本、用量监控 |
-| [10-排错手册](/openclaw/10-troubleshooting/) | 按症状索引的排查流程 |
+| [03-渠道接入](/openclaw/03-channel/) | Telegram / 飞书 / 微信 |
+| [04-浏览器自动化](/openclaw/04-browser/) | 四种方案由浅入深 |
+| [05-身份与人格](/openclaw/05-soul/) | Soul 定义与语气调教 |
+| [06-记忆管理](/openclaw/06-memory/) | 记忆机制、治理与清理 |
+| [07-Skills 管理](/openclaw/07-skills/) | 内置、自定义与治理 |
+| [08-多 Agent 协作](/openclaw/08-multi-agent/) | 子 Agent、角色分工 |
+| [09-定时任务与自动化](/openclaw/09-automation/) | 晨报 Digest、信息收集 |
+| [10-安全与成本](/openclaw/10-security-cost/) | 防火墙、降本、用量监控 |
+| [11-排错手册](/openclaw/11-troubleshooting/) | 按症状索引的排查流程 |
 
 建议按顺序学习。如果你已有基础，可以跳到感兴趣的模块。
 

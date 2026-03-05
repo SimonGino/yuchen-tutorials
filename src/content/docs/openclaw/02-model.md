@@ -239,4 +239,4 @@ openclaw models list
 
 模型跑通了，接下来接入聊天渠道：
 
-- [03-渠道接入](/openclaw/03-channel/)：Telegram / 飞书 / 微信 / 浏览器
+- [03-渠道接入](/openclaw/03-channel/)：Telegram / 飞书 / 微信

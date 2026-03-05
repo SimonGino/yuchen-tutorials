@@ -2,7 +2,7 @@
 title: Skills 管理：内置、自定义与治理
 description: Skills 加载机制、自定义开发与安全治理
 sidebar:
-  order: 6
+  order: 7
 ---
 
 ## 本节目标
@@ -184,4 +184,4 @@ openclaw health
 
 Skills 配好了，接下来学习多 Agent 协作：
 
-- [07-多 Agent 协作](/openclaw/07-multi-agent/)：子 Agent、角色分工与协作模式
+- [08-多 Agent 协作](/openclaw/08-multi-agent/)：子 Agent、角色分工与协作模式

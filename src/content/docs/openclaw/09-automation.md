@@ -2,7 +2,7 @@
 title: 定时任务与自动化：晨报 Digest、信息收集
 description: Cron 定时任务配置和信息收集自动化
 sidebar:
-  order: 8
+  order: 9
 ---
 
 ## 本节目标
@@ -230,4 +230,4 @@ openclaw cron edit <job_id> \
 
 自动化配好了，接下来关注安全和成本：
 
-- [09-安全与成本](/openclaw/09-security-cost/)：防火墙、降本、用量监控
+- [10-安全与成本](/openclaw/10-security-cost/)：防火墙、降本、用量监控

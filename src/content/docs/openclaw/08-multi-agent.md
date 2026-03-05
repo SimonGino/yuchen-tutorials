@@ -2,7 +2,7 @@
 title: 多 Agent 协作：子 Agent、角色分工与协作模式
 description: 配置子 Agent，实现任务分派与协作
 sidebar:
-  order: 7
+  order: 8
 ---
 
 ## 本节目标
@@ -128,4 +128,4 @@ sidebar:
 
 会分身了，接下来让助手自动定时干活：
 
-- [08-定时任务与自动化](/openclaw/08-automation/)：晨报 Digest、信息收集
+- [09-定时任务与自动化](/openclaw/09-automation/)：晨报 Digest、信息收集

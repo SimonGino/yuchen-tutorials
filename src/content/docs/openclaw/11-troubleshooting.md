@@ -2,7 +2,7 @@
 title: 排错手册：按症状索引，10 分钟收敛问题
 description: 按症状定位问题的排查流程
 sidebar:
-  order: 10
+  order: 11
 ---
 
 ## 本节目标
