@@ -132,3 +132,10 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   }
 </style>
+
+<style is:global>
+  /* Hide Starlight's auto-generated page title on homepage */
+  .content-panel:has(h1#_top) {
+    display: none;
+  }
+</style>
