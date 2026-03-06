@@ -14,6 +14,10 @@ export default defineConfig({
         'zh-CN': '宇辰AI编程',
         en: 'YuChen AI',
       },
+      logo: {
+        src: './src/assets/avatar.png',
+      },
+      favicon: '/favicon.png',
       defaultLocale: 'root',
       locales: {
         root: {

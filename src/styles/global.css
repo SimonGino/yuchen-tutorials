@@ -4,6 +4,10 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
+.site-title img {
+  border-radius: 50%;
+}
+
 @theme {
   --color-accent-50: var(--color-emerald-50);
   --color-accent-100: var(--color-emerald-100);
