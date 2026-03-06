@@ -32,7 +32,14 @@ export default defineConfig({
         {
           label: 'OpenClaw 从零到生产',
           translations: { en: 'OpenClaw Zero to Production' },
+          collapsed: true,
           autogenerate: { directory: 'openclaw' },
+        },
+        {
+          label: 'OpenCode 从零到生产级',
+          translations: { en: 'OpenCode Zero to Production' },
+          collapsed: true,
+          autogenerate: { directory: 'opencode' },
         },
       ],
       components: {

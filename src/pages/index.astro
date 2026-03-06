@@ -33,12 +33,15 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
             <span class="card-cta">开始学习 →</span>
           </div>
         </a>
-        <div class="tutorial-card tutorial-card--disabled">
-          <span class="card-badge">即将上线</span>
-          <div class="card-icon">🤖</div>
-          <h3 class="card-title">Claude Code</h3>
-          <p class="card-desc">AI 编程助手实战指南</p>
-        </div>
+        <a href="/opencode/" class="tutorial-card tutorial-card--clickable">
+          <div class="card-icon">⌨️</div>
+          <h3 class="card-title">OpenCode</h3>
+          <p class="card-desc">终端 AI 编程助手实战</p>
+          <div class="card-meta">
+            <span>8 章节</span>
+            <span class="card-cta">开始学习 →</span>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -71,7 +74,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
           <div class="footer-col">
             <p class="footer-col-title">教程</p>
             <a href="/openclaw/" class="footer-link">OpenClaw</a>
-            <span class="footer-link">Claude Code</span>
+            <a href="/opencode/" class="footer-link">OpenCode</a>
             <span class="footer-link">MCP 配置</span>
           </div>
           <div class="footer-col">
