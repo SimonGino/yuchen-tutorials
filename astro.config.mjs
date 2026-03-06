@@ -33,6 +33,7 @@ export default defineConfig({
       ],
       components: {
         SocialIcons: './src/components/CustomSocialIcons.astro',
+        Footer: './src/components/CustomFooter.astro',
       },
       plugins: [starlightImageZoom()],
       customCss: ['./src/styles/global.css'],
