@@ -1,0 +1,42 @@
+---
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+---
+
+<Default><slot /></Default>
+
+<div class="sidebar-community">
+  <div class="sidebar-community-divider"></div>
+  <p class="sidebar-community-title">💬 加入社群</p>
+  <p class="sidebar-community-desc">扫码关注公众号</p>
+  <img src="/images/wechat-qrcode.png" alt="微信公众号二维码" width="120" height="120" class="sidebar-community-qr" />
+</div>
+
+<style>
+  .sidebar-community {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .sidebar-community-divider {
+    border-top: 1px solid var(--sl-color-gray-5);
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-community-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .sidebar-community-desc {
+    font-size: 0.75rem;
+    color: var(--sl-color-gray-3);
+    margin: 0 0 0.75rem;
+  }
+
+  .sidebar-community-qr {
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+---
+
+<div class="community-banner">
+  <div class="community-banner-text">
+    <p class="community-banner-title">💬 遇到问题？加入学习社群获取帮助</p>
+    <p class="community-banner-desc">微信扫码关注「宇辰AI编程」公众号，回复「入群」加入答疑交流群</p>
+  </div>
+  <img src="/images/wechat-qrcode.png" alt="微信公众号二维码" width="100" height="100" class="community-banner-qr" />
+</div>
+
+<style>
+  .community-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border: 1px solid var(--sl-color-gray-5);
+    background: var(--sl-color-bg-nav);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .community-banner-text {
+    flex: 1;
+  }
+
+  .community-banner-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+
+  .community-banner-desc {
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-3);
+    margin: 0;
+  }
+
+  .community-banner-qr {
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 640px) {
+    .community-banner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

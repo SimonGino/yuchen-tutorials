@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
+import tailwindcss from '@tailwindcss/vite';
 
 import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
-  site: 'https://learn.yuchen.dev',
+  site: 'https://learn.aiqqyc.com',
 
   integrations: [
     starlight({
@@ -32,10 +33,15 @@ export default defineConfig({
       ],
       components: {
         SocialIcons: './src/components/CustomSocialIcons.astro',
+        Footer: './src/components/CustomFooter.astro',
+        Sidebar: './src/components/CustomSidebar.astro',
       },
       plugins: [starlightImageZoom()],
+      customCss: ['./src/styles/global.css'],
     }),
   ],
+
+  vite: { plugins: [tailwindcss()] },
 
   adapter: cloudflare(),
 });

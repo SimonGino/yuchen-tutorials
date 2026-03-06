@@ -1,0 +1,10 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+import CommunityBanner from './CommunityBanner.astro';
+
+const isCoursePage = Astro.url.pathname.includes('/openclaw/');
+---
+
+{isCoursePage && <CommunityBanner />}
+
+<Default><slot /></Default>
