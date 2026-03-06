@@ -1,5 +1,5 @@
 ---
-title: 渠道接入：Telegram / 飞书 / 微信
+title: 渠道接入：Telegram / 飞书
 description: 聊天渠道接入实战教程
 sidebar:
   order: 3

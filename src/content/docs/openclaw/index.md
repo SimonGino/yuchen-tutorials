@@ -79,7 +79,7 @@ sidebar:
 |------|------|
 | [01-安装](/openclaw/01-install/) | 三种安装路线，20 分钟跑通 |
 | [02-模型接入](/openclaw/02-model/) | 云端、本地、中转站配置 |
-| [03-渠道接入](/openclaw/03-channel/) | Telegram / 飞书 / 微信 |
+| [03-渠道接入](/openclaw/03-channel/) | Telegram / 飞书 |
 | [04-浏览器自动化](/openclaw/04-browser/) | 四种方案由浅入深 |
 | [05-身份与人格](/openclaw/05-soul/) | Soul 定义与语气调教 |
 | [06-记忆管理](/openclaw/06-memory/) | 记忆机制、治理与清理 |
