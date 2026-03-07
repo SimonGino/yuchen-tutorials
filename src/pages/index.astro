@@ -25,23 +25,18 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
       <h2 class="section-title">使用端工具教程</h2>
       <div class="card-grid">
         <a href="/openclaw/" class="tutorial-card tutorial-card--clickable">
-          <div class="card-icon">🦞</div>
-          <h3 class="card-title">OpenClaw</h3>
-          <p class="card-desc">从零搭建你的 AI 助手</p>
-          <div class="card-meta">
-            <span>11 章节</span>
-            <span class="card-cta">开始学习 →</span>
-          </div>
+          <h3 class="card-title"><span class="card-icon">🦞</span>OpenClaw</h3>
+          <p class="card-desc">从零搭建你的 AI 助手 · 11 章节</p>
         </a>
         <a href="/opencode/" class="tutorial-card tutorial-card--clickable">
-          <div class="card-icon">⌨️</div>
-          <h3 class="card-title">OpenCode</h3>
-          <p class="card-desc">终端 AI 编程助手实战</p>
-          <div class="card-meta">
-            <span>8 章节</span>
-            <span class="card-cta">开始学习 →</span>
-          </div>
+          <h3 class="card-title"><span class="card-icon">⌨️</span>OpenCode</h3>
+          <p class="card-desc">终端 AI 编程助手实战 · 8 章节</p>
         </a>
+        <div class="tutorial-card tutorial-card--disabled">
+          <span class="card-badge">即将上线</span>
+          <h3 class="card-title"><span class="card-icon">🤖</span>Claude Code</h3>
+          <p class="card-desc">AI 编程助手深度实战</p>
+        </div>
       </div>
     </section>
 
@@ -50,18 +45,23 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
       <div class="card-grid">
         <div class="tutorial-card tutorial-card--disabled">
           <span class="card-badge">即将上线</span>
-          <div class="card-icon">⚡</div>
-          <h3 class="card-title">MCP 配置</h3>
+          <h3 class="card-title"><span class="card-icon">⚡</span>MCP 配置</h3>
           <p class="card-desc">模型上下文协议实战</p>
         </div>
         <a href="/skill/" class="tutorial-card tutorial-card--clickable">
-          <div class="card-icon">🧩</div>
-          <h3 class="card-title">Skill 编写</h3>
-          <p class="card-desc">自定义技能开发指南</p>
-          <div class="card-meta">
-            <span>9 章节</span>
-            <span class="card-cta">开始学习 →</span>
-          </div>
+          <h3 class="card-title"><span class="card-icon">🧩</span>Skill 编写</h3>
+          <p class="card-desc">自定义技能开发指南 · 9 章节</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Open Source Projects -->
+    <section class="tutorial-section">
+      <h2 class="section-title">开源项目</h2>
+      <div class="card-grid">
+        <a href="https://github.com/ArcReel/ArcReel" target="_blank" rel="noopener" class="tutorial-card tutorial-card--clickable">
+          <h3 class="card-title"><span class="card-icon">🎬</span>ArcReel</h3>
+          <p class="card-desc">AI 驱动的小说转短视频工作台 · 开源</p>
         </a>
       </div>
     </section>
@@ -80,6 +80,10 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
             <a href="/opencode/" class="footer-link">OpenCode</a>
             <a href="/skill/" class="footer-link">Skill 编写</a>
             <span class="footer-link">MCP 配置</span>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">项目</p>
+            <a href="https://github.com/ArcReel/ArcReel" target="_blank" rel="noopener" class="footer-link">ArcReel</a>
           </div>
           <div class="footer-col">
             <p class="footer-col-title">关注</p>
@@ -139,7 +143,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
   /* Tutorial Sections */
   .tutorial-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.75rem;
   }
 
   .section-title {
@@ -152,14 +156,14 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    gap: 0.875rem;
   }
 
   /* Cards */
   .tutorial-card {
     position: relative;
     border-radius: 0.75rem;
-    padding: 1.5rem;
+    padding: 1rem 1.25rem;
     background-color: var(--sl-color-bg-nav);
     border: 1px solid var(--sl-color-gray-5);
     box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
@@ -193,8 +197,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   }
 
   .card-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
+    margin-right: 0.375rem;
   }
 
   .card-title {
@@ -210,19 +213,6 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     margin: 0;
   }
 
-  .card-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.75rem;
-    font-size: 0.85rem;
-    color: var(--sl-color-gray-3);
-  }
-
-  .card-cta {
-    font-weight: 600;
-    color: var(--sl-color-accent);
-  }
 
   /* Footer */
   .site-footer {
