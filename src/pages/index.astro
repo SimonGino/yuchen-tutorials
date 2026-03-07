@@ -24,6 +24,25 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
         </span>
       </div>
     </section>
+
+    <!-- Featured Tutorial -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-prefix">$</span> 推荐教程</h2>
+      <a href="/openclaw/" class="featured-card">
+        <div class="featured-accent"></div>
+        <div class="featured-body">
+          <div class="featured-header">
+            <h3 class="featured-name">🦞 OpenClaw · 从零搭建你的 AI 助手</h3>
+            <span class="featured-tag">入门</span>
+          </div>
+          <p class="featured-desc">从安装部署到 Skills 扩展，完整搭建你的私人 AI 助手系统</p>
+          <div class="featured-meta">
+            <span>11 章节</span>
+            <span class="featured-link">开始阅读 →</span>
+          </div>
+        </div>
+      </a>
+    </section>
   </div>
 </StarlightPage>
 
@@ -102,6 +121,96 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
   .hero-avatar {
     border-radius: 50%;
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--sl-color-gray-3);
+    margin: 0 0 1rem;
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .section-prefix {
+    color: var(--sl-color-accent);
+    margin-right: 0.5rem;
+  }
+
+  /* Featured Card */
+  .featured-card {
+    display: flex;
+    text-decoration: none;
+    background-color: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .featured-card:hover {
+    border-color: var(--sl-color-accent);
+  }
+
+  .featured-accent {
+    width: 4px;
+    flex-shrink: 0;
+    background-color: var(--sl-color-accent);
+  }
+
+  .featured-body {
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+  }
+
+  .featured-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .featured-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--sl-color-text);
+    margin: 0;
+  }
+
+  .featured-tag {
+    font-size: 0.7rem;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--sl-color-accent);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .featured-desc {
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-3);
+    margin: 0 0 0.75rem;
+    line-height: 1.6;
+  }
+
+  .featured-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  .featured-link {
+    color: var(--sl-color-accent);
+    font-weight: 600;
   }
 </style>
 
