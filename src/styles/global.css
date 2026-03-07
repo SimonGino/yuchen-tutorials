@@ -64,3 +64,18 @@
 .sl-markdown-content a:hover {
   text-decoration: underline;
 }
+
+/* Typography — Chinese long-form readability */
+.sl-markdown-content {
+  line-height: 1.8;
+}
+
+.sl-markdown-content p + p {
+  margin-top: 1.25em;
+}
+
+/* Headings — GitHub README style */
+.sl-markdown-content h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
