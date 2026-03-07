@@ -11,87 +11,105 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   }}
 >
   <div class="not-content homepage">
-    <!-- Profile Banner -->
-    <div class="profile-banner">
-      <img src="/images/avatar-cropped.png" alt="宇辰" class="profile-avatar" width="64" height="64" />
-      <div>
-        <p class="profile-name">宇辰AI编程</p>
-        <p class="profile-tagline">AI 前沿技术与实用技巧分享，让每个人都能用好 AI</p>
-      </div>
-    </div>
-
-    <!-- Tutorial Cards -->
-    <section class="tutorial-section">
-      <h2 class="section-title">使用端工具教程</h2>
-      <div class="card-grid">
-        <a href="/openclaw/" class="tutorial-card tutorial-card--clickable">
-          <h3 class="card-title"><span class="card-icon">🦞</span>OpenClaw</h3>
-          <p class="card-desc">从零搭建你的 AI 助手 · 11 章节</p>
-        </a>
-        <a href="/opencode/" class="tutorial-card tutorial-card--clickable">
-          <h3 class="card-title"><span class="card-icon">⌨️</span>OpenCode</h3>
-          <p class="card-desc">终端 AI 编程助手实战 · 8 章节</p>
-        </a>
-        <div class="tutorial-card tutorial-card--disabled">
-          <span class="card-badge">即将上线</span>
-          <h3 class="card-title"><span class="card-icon">🤖</span>Claude Code</h3>
-          <p class="card-desc">AI 编程助手深度实战</p>
-        </div>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <h1 class="hero-title">从零开始，系统掌握 AI 编程工具</h1>
+      <p class="hero-subtitle">实战教程 · 开源项目 · 持续更新</p>
+      <div class="hero-actions">
+        <a href="/openclaw/" class="hero-cta">开始学习 →</a>
+        <span class="hero-author">
+          <img src="/images/avatar-cropped.png" alt="宇辰" width="24" height="24" class="hero-avatar" />
+          by 宇辰
+        </span>
       </div>
     </section>
 
-    <section class="tutorial-section">
-      <h2 class="section-title">工具类教程</h2>
-      <div class="card-grid">
-        <div class="tutorial-card tutorial-card--disabled">
-          <span class="card-badge">即将上线</span>
-          <h3 class="card-title"><span class="card-icon">⚡</span>MCP 配置</h3>
-          <p class="card-desc">模型上下文协议实战</p>
+    <!-- Featured Tutorial -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-prefix">$</span> 推荐教程</h2>
+      <a href="/openclaw/" class="featured-card">
+        <div class="featured-accent"></div>
+        <div class="featured-body">
+          <div class="featured-header">
+            <h3 class="featured-name">🦞 OpenClaw · 从零搭建你的 AI 助手</h3>
+            <span class="featured-tag">入门</span>
+          </div>
+          <p class="featured-desc">从安装部署到 Skills 扩展，完整搭建你的私人 AI 助手系统</p>
+          <div class="featured-meta">
+            <span>11 章节</span>
+            <span class="featured-link">开始阅读 →</span>
+          </div>
         </div>
-        <a href="/skill/" class="tutorial-card tutorial-card--clickable">
-          <h3 class="card-title"><span class="card-icon">🧩</span>Skill 编写</h3>
-          <p class="card-desc">自定义技能开发指南 · 9 章节</p>
+      </a>
+    </section>
+
+    <!-- All Tutorials -->
+    <section class="section">
+      <h2 class="section-title"><span class="section-prefix">$</span> 全部教程</h2>
+      <div class="list">
+        <a href="/opencode/" class="list-row">
+          <span class="list-icon">⌨️</span>
+          <span class="list-name">OpenCode</span>
+          <span class="list-desc">终端 AI 编程助手实战</span>
+          <span class="list-meta">8 章节</span>
+          <span class="list-arrow">→</span>
         </a>
+        <a href="/skill/" class="list-row">
+          <span class="list-icon">🧩</span>
+          <span class="list-name">Skill 编写</span>
+          <span class="list-desc">自定义技能开发指南</span>
+          <span class="list-meta">9 章节</span>
+          <span class="list-arrow">→</span>
+        </a>
+        <div class="list-row list-row--disabled">
+          <span class="list-icon">🤖</span>
+          <span class="list-name">Claude Code</span>
+          <span class="list-desc">AI 编程助手深度实战</span>
+          <span class="list-badge">即将上线</span>
+        </div>
+        <div class="list-row list-row--disabled">
+          <span class="list-icon">⚡</span>
+          <span class="list-name">MCP 配置</span>
+          <span class="list-desc">模型上下文协议实战</span>
+          <span class="list-badge">即将上线</span>
+        </div>
       </div>
     </section>
 
     <!-- Open Source Projects -->
-    <section class="tutorial-section">
-      <h2 class="section-title">开源项目</h2>
-      <div class="card-grid">
-        <a href="https://github.com/ArcReel/ArcReel" target="_blank" rel="noopener" class="tutorial-card tutorial-card--clickable">
-          <h3 class="card-title"><span class="card-icon">🎬</span>ArcReel</h3>
-          <p class="card-desc">AI 驱动的小说转短视频工作台 · 开源</p>
+    <section class="section">
+      <h2 class="section-title"><span class="section-prefix">$</span> 开源项目</h2>
+      <div class="list">
+        <a href="https://github.com/ArcReel/ArcReel" target="_blank" rel="noopener" class="list-row">
+          <span class="list-icon">🎬</span>
+          <span class="list-name">ArcReel</span>
+          <span class="list-desc">AI 驱动的小说转短视频工作台</span>
+          <span class="list-meta">GitHub</span>
+          <span class="list-arrow">↗</span>
         </a>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="site-footer">
-      <div class="footer-top">
+      <div class="footer-inner">
         <div class="footer-brand">
-          <p class="footer-logo"><img src="/images/avatar-cropped.png" alt="宇辰" class="footer-avatar" width="28" height="28" /> 宇辰AI编程</p>
-          <p class="footer-desc">AI 前沿技术与实用技巧分享，从零开始系统掌握 AI 编程工具。</p>
+          <span class="footer-logo">
+            <img src="/images/avatar-cropped.png" alt="宇辰" width="20" height="20" class="footer-avatar" />
+            宇辰AI编程
+          </span>
+          <span class="footer-sep">·</span>
+          <span class="footer-desc">AI 前沿技术与实用技巧分享</span>
         </div>
-        <div class="footer-links">
-          <div class="footer-col">
-            <p class="footer-col-title">教程</p>
-            <a href="/openclaw/" class="footer-link">OpenClaw</a>
-            <a href="/opencode/" class="footer-link">OpenCode</a>
-            <a href="/skill/" class="footer-link">Skill 编写</a>
-            <span class="footer-link">MCP 配置</span>
-          </div>
-          <div class="footer-col">
-            <p class="footer-col-title">项目</p>
-            <a href="https://github.com/ArcReel/ArcReel" target="_blank" rel="noopener" class="footer-link">ArcReel</a>
-          </div>
-          <div class="footer-col">
-            <p class="footer-col-title">关注</p>
-            <span class="footer-qr-trigger">
-              公众号
-              <img src="/images/wechat-qrcode.png" alt="微信公众号二维码" class="footer-qr-img" width="160" height="160" />
-            </span>
-          </div>
+        <div class="footer-right">
+          <a href="/openclaw/" class="footer-link">OpenClaw</a>
+          <a href="/opencode/" class="footer-link">OpenCode</a>
+          <a href="/skill/" class="footer-link">Skill 编写</a>
+          <span class="footer-qr-trigger">
+            公众号
+            <img src="/images/wechat-qrcode.png" alt="微信公众号二维码" class="footer-qr-img" width="160" height="160" />
+          </span>
         </div>
       </div>
       <div class="footer-bottom">
@@ -106,198 +124,314 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   .homepage {
     max-width: 52rem;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 3rem;
   }
 
-  /* Profile Banner */
-  .profile-banner {
+  /* Hero */
+  .hero {
+    position: relative;
+    padding: 3.5rem 0 3rem;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--sl-color-text);
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--sl-color-gray-3);
+    margin: 0 0 2rem;
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  }
+
+  .hero-actions {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-    padding: 1.5rem 2rem;
-    margin-bottom: 2.5rem;
-    border-radius: 1rem;
-    background-color: var(--sl-color-bg-nav);
-    border: 1px solid var(--sl-color-gray-5);
-    box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
+    gap: 1.5rem;
   }
 
-  .profile-avatar {
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .profile-name {
-    font-size: 1.25rem;
+  .hero-cta {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--sl-color-accent);
+    color: #000 !important;
     font-weight: 700;
-    color: var(--sl-color-text);
-    margin: 0 0 0.25rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none !important;
+    transition: opacity 0.2s;
   }
 
-  .profile-tagline {
-    font-size: 0.9rem;
-    color: var(--sl-color-gray-3);
-    margin: 0;
-    line-height: 1.5;
+  .hero-cta:hover {
+    opacity: 0.9;
   }
 
-  /* Tutorial Sections */
-  .tutorial-section {
-    margin-bottom: 1.75rem;
-  }
-
-  .section-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--sl-color-text);
-    margin: 0 0 1rem;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.875rem;
-  }
-
-  /* Cards */
-  .tutorial-card {
-    position: relative;
-    border-radius: 0.75rem;
-    padding: 1rem 1.25rem;
-    background-color: var(--sl-color-bg-nav);
-    border: 1px solid var(--sl-color-gray-5);
-    box-shadow: 0 1px 3px rgb(0 0 0 / 0.06);
-  }
-
-  .tutorial-card--clickable {
-    display: block;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-
-  .tutorial-card--clickable:hover {
-    transform: translateY(-0.25rem);
-    border-color: var(--sl-color-accent) !important;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  }
-
-  .tutorial-card--disabled {
-    opacity: 0.75;
-  }
-
-  .card-badge {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    font-size: 0.75rem;
-    padding: 0.125rem 0.75rem;
-    border-radius: 9999px;
-    background-color: var(--sl-color-gray-5);
-    color: var(--sl-color-gray-3);
-  }
-
-  .card-icon {
-    margin-right: 0.375rem;
-  }
-
-  .card-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--sl-color-text);
-    margin: 0 0 0.25rem;
-  }
-
-  .card-desc {
-    font-size: 0.85rem;
-    color: var(--sl-color-gray-3);
-    margin: 0;
-  }
-
-
-  /* Footer */
-  .site-footer {
-    margin-top: 1.5rem;
-  }
-
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    padding: 2.5rem 0;
-    border-top: 1px solid var(--sl-color-gray-5);
-    align-items: flex-start;
-  }
-
-  .footer-brand {
-    flex: 1;
-    max-width: 20rem;
-  }
-
-  .footer-logo {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--sl-color-text);
-    margin: 0 0 0.5rem;
+  .hero-author {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  .hero-avatar {
+    border-radius: 50%;
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--sl-color-gray-3);
+    margin: 0 0 1rem;
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .section-prefix {
+    color: var(--sl-color-accent);
+    margin-right: 0.5rem;
+  }
+
+  /* Featured Card */
+  .featured-card {
+    display: flex;
+    text-decoration: none;
+    background-color: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .featured-card:hover {
+    border-color: var(--sl-color-accent);
+  }
+
+  .featured-accent {
+    width: 4px;
+    flex-shrink: 0;
+    background-color: var(--sl-color-accent);
+  }
+
+  .featured-body {
+    padding: 1.25rem 1.5rem;
+    flex: 1;
+  }
+
+  .featured-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .featured-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--sl-color-text);
+    margin: 0;
+  }
+
+  .featured-tag {
+    font-size: 0.7rem;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--sl-color-accent);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .featured-desc {
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-3);
+    margin: 0 0 0.75rem;
+    line-height: 1.6;
+  }
+
+  .featured-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  .featured-link {
+    color: var(--sl-color-accent);
+    font-weight: 600;
+  }
+
+  /* Compact List */
+  .list {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+  .list-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: background-color 0.15s, border-color 0.15s;
+  }
+
+  .list-row + .list-row {
+    border-top: 1px solid var(--sl-color-gray-6);
+  }
+
+  a.list-row:hover {
+    background-color: var(--sl-color-bg-nav);
+    border-left-color: var(--sl-color-accent);
+  }
+
+  .list-row--disabled {
+    opacity: 0.5;
+  }
+
+  .list-icon {
+    flex-shrink: 0;
+    width: 1.5rem;
+    text-align: center;
+  }
+
+  .list-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--sl-color-text);
+    white-space: nowrap;
+    min-width: 6rem;
+  }
+
+  .list-desc {
+    font-size: 0.8rem;
+    color: var(--sl-color-gray-3);
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .list-meta {
+    font-size: 0.75rem;
+    color: var(--sl-color-gray-3);
+    white-space: nowrap;
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  }
+
+  .list-arrow {
+    color: var(--sl-color-gray-3);
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+
+  a.list-row:hover .list-arrow {
+    color: var(--sl-color-accent);
+  }
+
+  .list-badge {
+    font-size: 0.7rem;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    background-color: var(--sl-color-gray-5);
+    color: var(--sl-color-gray-3);
+    white-space: nowrap;
+  }
+
+  /* Footer */
+  .site-footer {
+    margin-top: 1rem;
+    border-top: 1px solid var(--sl-color-gray-5);
+    padding-top: 1.5rem;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-3);
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-weight: 700;
+    color: var(--sl-color-text);
   }
 
   .footer-avatar {
     border-radius: 50%;
   }
 
+  .footer-sep {
+    color: var(--sl-color-gray-5);
+  }
+
   .footer-desc {
-    font-size: 0.875rem;
-    line-height: 1.6;
     color: var(--sl-color-gray-3);
-    margin: 0;
   }
 
-  .footer-links {
+  .footer-right {
     display: flex;
-    gap: 3rem;
-    align-items: flex-start;
-  }
-
-  .footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .footer-col-title {
-    font-weight: 700;
-    font-size: 0.875rem;
-    color: var(--sl-color-text);
-    margin: 0 0 0.25rem;
+    align-items: center;
+    gap: 1.25rem;
   }
 
   .footer-link {
-    font-size: 0.875rem;
-    color: var(--sl-color-gray-3);
-    text-decoration: none;
-  }
-
-  a.footer-link:hover {
-    color: var(--sl-color-accent);
-  }
-
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--sl-color-gray-6);
     font-size: 0.8rem;
     color: var(--sl-color-gray-3);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .footer-link:hover {
+    color: var(--sl-color-accent);
   }
 
   .footer-qr-trigger {
     position: relative;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: var(--sl-color-gray-3);
     cursor: pointer;
+    transition: color 0.15s;
   }
 
   .footer-qr-trigger:hover {
@@ -311,7 +445,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0.5rem;
-    box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.25);
     background: white;
     padding: 0.5rem;
     z-index: 10;
@@ -321,20 +455,48 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     display: block;
   }
 
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--sl-color-gray-6);
+    font-size: 0.75rem;
+    color: var(--sl-color-gray-4);
+  }
+
   /* Mobile */
   @media (max-width: 640px) {
-    .card-grid {
-      grid-template-columns: 1fr;
+    .hero-title {
+      font-size: 1.75rem;
     }
 
-    .footer-top {
+    .hero-subtitle {
+      font-size: 0.95rem;
+    }
+
+    .featured-header {
+      flex-wrap: wrap;
+    }
+
+    .list-desc {
+      display: none;
+    }
+
+    .footer-inner {
       flex-direction: column;
-      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .footer-right {
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .footer-bottom {
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.25rem;
       text-align: center;
     }
   }

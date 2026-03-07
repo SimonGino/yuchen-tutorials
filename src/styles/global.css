@@ -32,3 +32,62 @@
   --color-gray-900: var(--color-slate-900);
   --color-gray-950: var(--color-slate-950);
 }
+
+/* Code blocks — terminal feel */
+:root {
+  --sl-color-bg-inline-code: rgba(16, 185, 129, 0.08);
+}
+
+.sl-markdown-content pre {
+  background-color: #0d1117 !important;
+  border: 1px solid var(--sl-color-gray-5);
+  border-left: 3px solid var(--sl-color-accent);
+  border-radius: 0.5rem;
+}
+
+.sl-markdown-content pre code {
+  font-size: 0.875rem;
+}
+
+/* Admonitions — darker, unified palette */
+.starlight-aside {
+  border-color: var(--sl-color-gray-5);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Links — emerald green */
+.sl-markdown-content a {
+  color: var(--sl-color-accent);
+  text-decoration: none;
+}
+
+.sl-markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Typography — Chinese long-form readability */
+.sl-markdown-content {
+  line-height: 1.8;
+}
+
+.sl-markdown-content p + p {
+  margin-top: 1.25em;
+}
+
+/* Headings — GitHub README style */
+.sl-markdown-content h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+/* Sidebar — active item green left bar */
+nav.sidebar-content a[aria-current="page"] {
+  border-left: 3px solid var(--sl-color-accent);
+  padding-left: calc(0.5rem - 3px);
+  background-color: rgba(16, 185, 129, 0.08);
+}
+
+/* TOC — highlight color */
+starlight-toc a[aria-current="true"] {
+  color: var(--sl-color-accent);
+}
