@@ -54,12 +54,15 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
           <h3 class="card-title">MCP 配置</h3>
           <p class="card-desc">模型上下文协议实战</p>
         </div>
-        <div class="tutorial-card tutorial-card--disabled">
-          <span class="card-badge">即将上线</span>
+        <a href="/skill/" class="tutorial-card tutorial-card--clickable">
           <div class="card-icon">🧩</div>
           <h3 class="card-title">Skill 编写</h3>
           <p class="card-desc">自定义技能开发指南</p>
-        </div>
+          <div class="card-meta">
+            <span>9 章节</span>
+            <span class="card-cta">开始学习 →</span>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -75,6 +78,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
             <p class="footer-col-title">教程</p>
             <a href="/openclaw/" class="footer-link">OpenClaw</a>
             <a href="/opencode/" class="footer-link">OpenCode</a>
+            <a href="/skill/" class="footer-link">Skill 编写</a>
             <span class="footer-link">MCP 配置</span>
           </div>
           <div class="footer-col">
