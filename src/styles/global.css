@@ -32,3 +32,35 @@
   --color-gray-900: var(--color-slate-900);
   --color-gray-950: var(--color-slate-950);
 }
+
+/* Code blocks — terminal feel */
+:root {
+  --sl-color-bg-inline-code: rgba(16, 185, 129, 0.08);
+}
+
+.sl-markdown-content pre {
+  background-color: #0d1117 !important;
+  border: 1px solid var(--sl-color-gray-5);
+  border-left: 3px solid var(--sl-color-accent);
+  border-radius: 0.5rem;
+}
+
+.sl-markdown-content pre code {
+  font-size: 0.875rem;
+}
+
+/* Admonitions — darker, unified palette */
+.starlight-aside {
+  border-color: var(--sl-color-gray-5);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Links — emerald green */
+.sl-markdown-content a {
+  color: var(--sl-color-accent);
+  text-decoration: none;
+}
+
+.sl-markdown-content a:hover {
+  text-decoration: underline;
+}
