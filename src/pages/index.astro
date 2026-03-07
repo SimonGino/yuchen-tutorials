@@ -465,6 +465,41 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     font-size: 0.75rem;
     color: var(--sl-color-gray-4);
   }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+    }
+
+    .featured-header {
+      flex-wrap: wrap;
+    }
+
+    .list-desc {
+      display: none;
+    }
+
+    .footer-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer-right {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 0.25rem;
+      text-align: center;
+    }
+  }
 </style>
 
 <style is:global>
