@@ -41,6 +41,12 @@ export default defineConfig({
           collapsed: true,
           autogenerate: { directory: 'opencode' },
         },
+        {
+          label: 'Skill 编写指南',
+          translations: { en: 'Skill Writing Guide' },
+          collapsed: true,
+          autogenerate: { directory: 'skill' },
+        },
       ],
       components: {
         SocialIcons: './src/components/CustomSocialIcons.astro',
