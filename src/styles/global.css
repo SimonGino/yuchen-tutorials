@@ -9,28 +9,54 @@
 }
 
 @theme {
-  --color-accent-50: var(--color-emerald-50);
-  --color-accent-100: var(--color-emerald-100);
-  --color-accent-200: var(--color-emerald-200);
-  --color-accent-300: var(--color-emerald-300);
-  --color-accent-400: var(--color-emerald-400);
-  --color-accent-500: var(--color-emerald-500);
-  --color-accent-600: var(--color-emerald-600);
-  --color-accent-700: var(--color-emerald-700);
-  --color-accent-800: var(--color-emerald-800);
-  --color-accent-900: var(--color-emerald-900);
-  --color-accent-950: var(--color-emerald-950);
-  --color-gray-50: var(--color-slate-50);
-  --color-gray-100: var(--color-slate-100);
-  --color-gray-200: var(--color-slate-200);
-  --color-gray-300: var(--color-slate-300);
-  --color-gray-400: var(--color-slate-400);
-  --color-gray-500: var(--color-slate-500);
-  --color-gray-600: var(--color-slate-600);
-  --color-gray-700: var(--color-slate-700);
-  --color-gray-800: var(--color-slate-800);
-  --color-gray-900: var(--color-slate-900);
-  --color-gray-950: var(--color-slate-950);
+  --color-accent-50: #fafafa;
+  --color-accent-100: #f4f4f5;
+  --color-accent-200: #e4e4e7;
+  --color-accent-300: #d4d4d8;
+  --color-accent-400: #a1a1aa;
+  --color-accent-500: #71717a;
+  --color-accent-600: #52525b;
+  --color-accent-700: #3f3f46;
+  --color-accent-800: #27272a;
+  --color-accent-900: #18181b;
+  --color-accent-950: #09090b;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f4f4f5;
+  --color-gray-200: #e4e4e7;
+  --color-gray-300: #d4d4d8;
+  --color-gray-400: #a1a1aa;
+  --color-gray-500: #71717a;
+  --color-gray-600: #52525b;
+  --color-gray-700: #3f3f46;
+  --color-gray-800: #27272a;
+  --color-gray-900: #18181b;
+  --color-gray-950: #09090b;
+}
+
+/* Sidebar active state: rounded pill highlight */
+[aria-current='page'] {
+  border-radius: 0.5rem;
+}
+
+/* Links: body color + underline, hover dims to gray */
+.sl-markdown-content a:not(:where(.not-content *)) {
+  color: var(--sl-color-text);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.sl-markdown-content a:hover:not(:where(.not-content *)) {
+  color: #71717a;
+}
+
+/* Admonitions: unified gray */
+.starlight-aside--note,
+.starlight-aside--tip,
+.starlight-aside--caution,
+.starlight-aside--danger {
+  --sl-color-asides-text-accent: var(--sl-color-gray-2);
+  --sl-color-asides-border: var(--sl-color-gray-4);
+  background-color: var(--sl-color-gray-6);
 }
 
 /* Code blocks — terminal feel */
