@@ -13,7 +13,6 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   <div class="not-content homepage">
     <!-- Hero -->
     <section class="hero">
-      <div class="hero-bg"></div>
       <h1 class="hero-title">从零开始，系统掌握 AI 编程工具</h1>
       <p class="hero-subtitle">实战教程 · 开源项目 · 持续更新</p>
       <div class="hero-actions">
@@ -27,7 +26,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
     <!-- Featured Tutorial -->
     <section class="section">
-      <h2 class="section-title"><span class="section-prefix">$</span> 推荐教程</h2>
+      <h2 class="section-title"> 推荐教程</h2>
       <a href="/openclaw/" class="featured-card">
         <div class="featured-accent"></div>
         <div class="featured-body">
@@ -46,7 +45,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
     <!-- All Tutorials -->
     <section class="section">
-      <h2 class="section-title"><span class="section-prefix">$</span> 全部教程</h2>
+      <h2 class="section-title"> 全部教程</h2>
       <div class="list">
         <a href="/opencode/" class="list-row">
           <span class="list-icon">⌨️</span>
@@ -79,7 +78,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
     <!-- Open Source Projects -->
     <section class="section">
-      <h2 class="section-title"><span class="section-prefix">$</span> 开源项目</h2>
+      <h2 class="section-title"> 开源项目</h2>
       <div class="list">
         <a href="https://github.com/ArcReel/ArcReel" target="_blank" rel="noopener" class="list-row">
           <span class="list-icon">🎬</span>
@@ -135,18 +134,6 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     overflow: hidden;
   }
 
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(113, 113, 122, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(113, 113, 122, 0.08) 1px, transparent 1px);
-    background-size: 24px 24px;
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-    pointer-events: none;
-  }
-
   .hero-title {
     font-size: 2.5rem;
     font-weight: 800;
@@ -160,7 +147,6 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     font-size: 1.1rem;
     color: var(--sl-color-gray-3);
     margin: 0 0 2rem;
-    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
   }
 
   .hero-actions {
@@ -172,8 +158,8 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   .hero-cta {
     display: inline-block;
     padding: 0.75rem 2rem;
-    background-color: var(--sl-color-accent);
-    color: #000 !important;
+    background-color: var(--sl-color-text);
+    color: var(--sl-color-bg) !important;
     font-weight: 700;
     font-size: 1rem;
     border-radius: 0.5rem;
@@ -199,14 +185,8 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     font-weight: 700;
     color: var(--sl-color-gray-3);
     margin: 0 0 1rem;
-    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-  }
-
-  .section-prefix {
-    color: var(--sl-color-accent);
-    margin-right: 0.5rem;
   }
 
   /* Featured Card */
@@ -221,13 +201,13 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   }
 
   .featured-card:hover {
-    border-color: var(--sl-color-accent);
+    border-color: var(--sl-color-gray-3);
   }
 
   .featured-accent {
     width: 4px;
     flex-shrink: 0;
-    background-color: var(--sl-color-accent);
+    background-color: var(--sl-color-gray-4);
   }
 
   .featured-body {
@@ -254,7 +234,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     padding: 0.125rem 0.625rem;
     border-radius: 9999px;
     background-color: var(--sl-color-gray-5);
-    color: var(--sl-color-accent);
+    color: var(--sl-color-gray-2);
     font-weight: 600;
     white-space: nowrap;
   }
@@ -275,7 +255,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   }
 
   .featured-link {
-    color: var(--sl-color-accent);
+    color: var(--sl-color-text);
     font-weight: 600;
   }
 
@@ -302,7 +282,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
   a.list-row:hover {
     background-color: var(--sl-color-bg-nav);
-    border-left-color: var(--sl-color-accent);
+    border-left-color: var(--sl-color-gray-4);
   }
 
   .list-row--disabled {
@@ -336,7 +316,6 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     font-size: 0.75rem;
     color: var(--sl-color-gray-3);
     white-space: nowrap;
-    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
   }
 
   .list-arrow {
@@ -346,7 +325,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   }
 
   a.list-row:hover .list-arrow {
-    color: var(--sl-color-accent);
+    color: var(--sl-color-text);
   }
 
   .list-badge {
@@ -415,7 +394,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   }
 
   .footer-link:hover {
-    color: var(--sl-color-accent);
+    color: var(--sl-color-text);
   }
 
   .footer-qr-trigger {
@@ -427,7 +406,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   }
 
   .footer-qr-trigger:hover {
-    color: var(--sl-color-accent);
+    color: var(--sl-color-text);
   }
 
   .footer-qr-img {

@@ -33,9 +33,18 @@
   --color-gray-950: #09090b;
 }
 
-/* Sidebar active state: rounded pill highlight */
+/* Inline code — gray background */
+:root {
+  --sl-color-bg-inline-code: rgba(113, 113, 122, 0.1);
+}
+
+/* Sidebar active state: gray rounded highlight */
 [aria-current='page'] {
   border-radius: 0.5rem;
+}
+
+nav.sidebar-content a[aria-current="page"] {
+  background-color: rgba(113, 113, 122, 0.12);
 }
 
 /* Links: body color + underline, hover dims to gray */
@@ -59,36 +68,20 @@
   background-color: var(--sl-color-gray-6);
 }
 
-/* Code blocks — terminal feel */
-:root {
-  --sl-color-bg-inline-code: rgba(16, 185, 129, 0.08);
-}
-
-.sl-markdown-content pre {
-  background-color: #0d1117 !important;
-  border: 1px solid var(--sl-color-gray-5);
-  border-left: 3px solid var(--sl-color-accent);
-  border-radius: 0.5rem;
-}
-
-.sl-markdown-content pre code {
-  font-size: 0.875rem;
-}
-
-/* Admonitions — darker, unified palette */
 .starlight-aside {
   border-color: var(--sl-color-gray-5);
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Links — emerald green */
-.sl-markdown-content a {
-  color: var(--sl-color-accent);
-  text-decoration: none;
+/* Code blocks — monochrome */
+.sl-markdown-content pre {
+  background-color: #0d1117 !important;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
 }
 
-.sl-markdown-content a:hover {
-  text-decoration: underline;
+.sl-markdown-content pre code {
+  font-size: 0.875rem;
 }
 
 /* Typography — Chinese long-form readability */
@@ -106,14 +99,7 @@
   border-bottom: 1px solid var(--sl-color-gray-5);
 }
 
-/* Sidebar — active item green left bar */
-nav.sidebar-content a[aria-current="page"] {
-  border-left: 3px solid var(--sl-color-accent);
-  padding-left: calc(0.5rem - 3px);
-  background-color: rgba(16, 185, 129, 0.08);
-}
-
 /* TOC — highlight color */
 starlight-toc a[aria-current="true"] {
-  color: var(--sl-color-accent);
+  color: var(--sl-color-text);
 }
