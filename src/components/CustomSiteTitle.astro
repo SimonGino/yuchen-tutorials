@@ -1,0 +1,22 @@
+---
+import Default from '@astrojs/starlight/components/SiteTitle.astro';
+
+const route = Astro.locals.starlightRoute;
+const currentId = route.id;
+
+// Extract tutorial section from route ID
+const parts = currentId.split('/');
+const section = parts[0] === 'en' ? parts[1] : parts[0];
+
+const sectionTitles: Record<string, string> = {
+  openclaw: 'OpenClaw 从零到生产',
+  opencode: 'OpenCode 从零到生产级',
+  skill: 'Skill 编写指南',
+};
+
+if (section in sectionTitles) {
+  route.siteTitle = sectionTitles[section];
+}
+---
+
+<Default />

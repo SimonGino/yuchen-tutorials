@@ -1,12 +1,44 @@
 ---
 import Default from '@astrojs/starlight/components/Sidebar.astro';
+
+const route = Astro.locals.starlightRoute;
+const currentId = route.id;
+
+// Extract tutorial section from route ID
+// Root locale: "openclaw/01-install" → "openclaw"
+// English locale: "en/openclaw/01-install" → "openclaw"
+const parts = currentId.split('/');
+const section = parts[0] === 'en' ? parts[1] : parts[0];
+
+const tutorialSections = ['openclaw', 'opencode', 'skill'];
+
+if (tutorialSections.includes(section)) {
+  // Find the group containing the current page
+  const matchingGroup = route.sidebar.find((entry) => {
+    if (entry.type === 'group') {
+      return hasCurrentPage(entry);
+    }
+    return false;
+  });
+
+  if (matchingGroup && matchingGroup.type === 'group') {
+    // Show only the matching group, uncollapsed
+    route.sidebar = [{ ...matchingGroup, collapsed: false }];
+  }
+}
+
+function hasCurrentPage(entry: any): boolean {
+  if (entry.type === 'link') return entry.isCurrent;
+  if (entry.type === 'group') return entry.entries.some((e: any) => hasCurrentPage(e));
+  return false;
+}
 ---
 
 <Default><slot /></Default>
 
 <div class="sidebar-community">
   <div class="sidebar-community-divider"></div>
-  <p class="sidebar-community-title">💬 加入社群</p>
+  <p class="sidebar-community-title">加入社群</p>
   <p class="sidebar-community-desc">扫码关注公众号</p>
   <img src="/images/wechat-qrcode.png" alt="微信公众号二维码" width="120" height="120" class="sidebar-community-qr" />
 </div>
