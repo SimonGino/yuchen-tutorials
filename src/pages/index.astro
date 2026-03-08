@@ -166,7 +166,10 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
   .hero-actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    padding: 1.5rem 0;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--sl-color-gray-5);
   }
 
   .hero-cta {
@@ -185,7 +188,100 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     opacity: 0.9;
   }
 
-  .hero-author {
+  /* Tutorial Sections */
+  .tutorial-section {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--sl-color-text);
+    margin: 0 0 1rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.875rem;
+  }
+
+  /* Cards */
+  .tutorial-card {
+    position: relative;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    background-color: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+  }
+
+  .tutorial-card--clickable {
+    display: block;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+
+  .tutorial-card--clickable:hover {
+    border-color: var(--sl-color-gray-3);
+  }
+
+  .tutorial-card--disabled {
+    opacity: 0.75;
+  }
+
+  .card-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.75rem;
+    padding: 0.125rem 0.75rem;
+    border-radius: 9999px;
+    background-color: var(--sl-color-gray-5);
+    color: var(--sl-color-gray-3);
+  }
+
+  .card-icon {
+    margin-right: 0.375rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--sl-color-text);
+    margin: 0 0 0.25rem;
+  }
+
+  .card-desc {
+    font-size: 0.85rem;
+    color: var(--sl-color-gray-3);
+    margin: 0;
+  }
+
+
+  /* Footer */
+  .site-footer {
+    margin-top: 1.5rem;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--sl-color-gray-5);
+    align-items: flex-start;
+  }
+
+  .footer-brand {
+    flex: 1;
+    max-width: 20rem;
+  }
+
+  .footer-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--sl-color-text);
+    margin: 0 0 0.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
