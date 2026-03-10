@@ -73,15 +73,70 @@ nav.sidebar-content a[aria-current="page"] {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Code blocks — monochrome */
-.sl-markdown-content pre {
-  background-color: #0d1117 !important;
-  border: 1px solid var(--sl-color-gray-5);
-  border-radius: 0.5rem;
+/* Code blocks — zinc monochrome */
+
+/* Dark theme colors (default) */
+:root {
+  --ec-codeBg: #18181b;
+  --ec-brdCol: #3f3f46;
 }
 
-.sl-markdown-content pre code {
-  font-size: 0.875rem;
+/* Light theme colors - auto detect */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --ec-codeBg: #fafafa;
+    --ec-brdCol: #e4e4e7;
+  }
+}
+
+/* Light theme colors - explicit */
+:root[data-theme='light'] .expressive-code:not([data-theme='dark']),
+.expressive-code[data-theme='light'] {
+  --ec-codeBg: #fafafa;
+  --ec-brdCol: #e4e4e7;
+}
+
+/* Use codeBg for all frame types (override terminal/editor background) */
+.expressive-code .frame {
+  --code-background: var(--ec-codeBg);
+}
+
+/* Hide terminal window decorations (three dots + title bar) */
+.expressive-code .frame.is-terminal .header {
+  display: none;
+}
+
+/* Restore pre top border and radius for terminal blocks */
+.expressive-code .frame.is-terminal pre,
+.expressive-code .frame.is-terminal code {
+  border-top: var(--ec-brdWd) solid var(--ec-brdCol);
+  border-top-left-radius: calc(var(--ec-brdRad) + var(--ec-brdWd));
+  border-top-right-radius: calc(var(--ec-brdRad) + var(--ec-brdWd));
+}
+
+/* Reset copy button spacing for terminal blocks (no header) */
+.expressive-code .frame.is-terminal {
+  --button-spacing: 0.4rem;
+}
+
+/* Language label — top-right corner */
+.expressive-code pre {
+  position: relative;
+}
+
+.expressive-code pre[data-language]::after {
+  content: attr(data-language);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 0.7rem;
+  line-height: 1;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 2;
 }
 
 /* Typography — Chinese long-form readability */
