@@ -54,6 +54,14 @@ export default defineConfig({
         Footer: './src/components/CustomFooter.astro',
         Sidebar: './src/components/CustomSidebar.astro',
       },
+      expressiveCode: {
+        styleOverrides: {
+          borderRadius: '0.75rem',
+          codePaddingBlock: '1rem',
+          codePaddingInline: '1.25rem',
+          codeFontSize: '0.85rem',
+        },
+      },
       plugins: [starlightImageZoom()],
       customCss: ['./src/styles/global.css'],
     }),
