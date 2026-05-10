@@ -30,6 +30,12 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: 'Claude Code 完全手册',
+          translations: { en: 'Claude Code Complete Guide' },
+          collapsed: true,
+          autogenerate: { directory: 'claude-code' },
+        },
+        {
           label: 'OpenClaw 从零到生产',
           translations: { en: 'OpenClaw Zero to Production' },
           collapsed: true,
