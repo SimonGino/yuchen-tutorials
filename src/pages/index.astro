@@ -24,23 +24,39 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
       </div>
     </section>
 
-    <!-- Featured Tutorial -->
+    <!-- Featured Tutorials -->
     <section class="section">
       <h2 class="section-title"> 推荐教程</h2>
-      <a href="/openclaw/" class="featured-card">
-        <div class="featured-accent"></div>
-        <div class="featured-body">
-          <div class="featured-header">
-            <h3 class="featured-name">🦞 OpenClaw · 从零搭建你的 AI 助手</h3>
-            <span class="featured-tag">入门</span>
+      <div class="featured-grid">
+        <a href="/claude-code/" class="featured-card">
+          <div class="featured-accent"></div>
+          <div class="featured-body">
+            <div class="featured-header">
+              <h3 class="featured-name">🤖 Claude Code · 完全手册</h3>
+              <span class="featured-tag">新</span>
+            </div>
+            <p class="featured-desc">从订阅上手到 Harness Engineering，9 章吃透 Anthropic 官方 CLI Agent</p>
+            <div class="featured-meta">
+              <span>9 章节</span>
+              <span class="featured-link">开始阅读 →</span>
+            </div>
           </div>
-          <p class="featured-desc">从安装部署到 Skills 扩展，完整搭建你的私人 AI 助手系统</p>
-          <div class="featured-meta">
-            <span>11 章节</span>
-            <span class="featured-link">开始阅读 →</span>
+        </a>
+        <a href="/openclaw/" class="featured-card">
+          <div class="featured-accent"></div>
+          <div class="featured-body">
+            <div class="featured-header">
+              <h3 class="featured-name">🦞 OpenClaw · 从零搭建你的 AI 助手</h3>
+              <span class="featured-tag">入门</span>
+            </div>
+            <p class="featured-desc">从安装部署到 Skills 扩展，完整搭建你的私人 AI 助手系统</p>
+            <div class="featured-meta">
+              <span>11 章节</span>
+              <span class="featured-link">开始阅读 →</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </section>
 
     <!-- All Tutorials -->
@@ -52,6 +68,13 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
           <span class="list-name">Claude Code</span>
           <span class="list-desc">从订阅上手到 Harness Engineering 的 9 章完全手册</span>
           <span class="list-meta">9 章节</span>
+          <span class="list-arrow">→</span>
+        </a>
+        <a href="/openclaw/" class="list-row">
+          <span class="list-icon">🦞</span>
+          <span class="list-name">OpenClaw</span>
+          <span class="list-desc">从零搭建你的私人 AI 助手系统</span>
+          <span class="list-meta">11 章节</span>
           <span class="list-arrow">→</span>
         </a>
         <a href="/opencode/" class="list-row">
@@ -198,7 +221,13 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     letter-spacing: 0.05em;
   }
 
-  /* Featured Card */
+  /* Featured Cards */
+  .featured-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
   .featured-card {
     display: flex;
     text-decoration: none;
