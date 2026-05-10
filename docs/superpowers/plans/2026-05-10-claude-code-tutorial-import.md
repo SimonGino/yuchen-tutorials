@@ -409,7 +409,7 @@ sidebar:
 ls src/content/docs/claude-code/ | sort
 ```
 Expected:
-```
+```text
 01-getting-started.md
 02-claude-directory.md
 03-env-permissions.md

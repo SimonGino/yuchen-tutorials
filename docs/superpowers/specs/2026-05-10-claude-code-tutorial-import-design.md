@@ -97,7 +97,7 @@ sidebar:
 
 `public/images/claude-code/` 下放 9 张封面图：
 
-```
+```text
 01-getting-started.png
 02-claude-directory.png
 03-env-permissions.png
