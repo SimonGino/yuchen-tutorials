@@ -24,7 +24,7 @@ sidebar:
 
 在深入每个配置文件之前，先建一个整体的心智模型。`.claude` 目录分两个地方，一个跟项目走，一个跟你走：
 
-```
+```text
 your-project/                          # 项目级（提交到 Git，团队共享）
 ├── CLAUDE.md                          # 项目说明书
 ├── CLAUDE.local.md                    # 个人覆盖（自动 gitignore）
@@ -279,7 +279,7 @@ CLAUDE.md 是「入职手册」，但有些东西放在里面不太合适——�
 
 最直接的用法——当你的 CLAUDE.md 超过 200 行时，把强制规则拆出来：
 
-```
+```text
 .claude/rules/
 ├── code-style.md          # 代码风格约束
 ├── testing.md             # 测试规范
@@ -319,7 +319,7 @@ Claude Code 在工作过程中会自动记录有用的信息：这个项目用�
 
 你也可以主动让它记：「记住我们用 pnpm 不用 npm」，它会写到 memory 文件里。
 
-```
+```text
 ~/.claude/projects/<project>/memory/
 ├── MEMORY.md              # 主记忆文件（前 200 行自动加载）
 ├── debugging.md           # 主题记忆（按需读取）
@@ -415,7 +415,7 @@ settings.json 有全局和项目两层，什么放哪里？一个简单的判断
 
 在项目目录下启动 Claude Code，输入：
 
-```
+```text
 /init
 ```
 
@@ -476,7 +476,7 @@ Claude Code 会自动把 `.local` 文件加入 gitignore，不需要你手动操
 
 渐进式的搭建路径可以这么走：
 
-```
+```text
 /init 生成 CLAUDE.md
     ↓
 加 settings.json（基本的 allow/deny）

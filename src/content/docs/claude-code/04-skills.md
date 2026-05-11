@@ -24,7 +24,7 @@ sidebar:
 
 经常有人误解 Skills「只不过是 markdown 文件」。其实 Skills 是**文件夹**——可以包含脚本、资源文件、参考文档、模板，Claude 会自动发现和使用这些内容。一个 Skill 的完整结构长这样：
 
-```
+```text
 my-skill/
 ├── SKILL.md           # 核心说明（必须有）
 ├── template.md        # 模板，让 Claude 填充
@@ -51,7 +51,7 @@ my-skill/
 
 每次写完一段代码就跑一遍。它会并行启动三个审查 Agent：代码复用审查（找重复代码）、代码质量审查（查逻辑错误和边界情况）、效率审查（找性能瓶颈），然后汇总发现并自动修复。
 
-```
+```text
 /simplify                          # 审查所有最近变更
 /simplify focus on error handling   # 聚焦错误处理
 ```
@@ -62,7 +62,7 @@ my-skill/
 
 把一个大任务拆成 5-30 个独立单元，每个在隔离的 Git Worktree 里并行执行。适合模式化的批量迁移——框架迁移、API 版本升级、给整个项目加 TypeScript 类型。
 
-```
+```text
 /batch migrate src/ from Jest to Vitest
 /batch add TypeScript types to all JavaScript files in lib/
 ```
@@ -71,7 +71,7 @@ my-skill/
 
 按间隔重复执行一个命令。监控部署、检查 CI 状态用得上。
 
-```
+```text
 /loop 5m check if the deploy finished
 /loop 1h check for new PR comments
 ```

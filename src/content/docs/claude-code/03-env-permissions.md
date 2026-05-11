@@ -348,7 +348,7 @@ Hooks 可以做运行时的权限判断——PreToolUse hook 以 exit code 2 退
 
 不管是环境变量还是权限规则，多层配置的生效优先级都遵循同一条链：
 
-```
+```text
 命令行参数（--model opus）     ← 最高
     ↓
 本地配置（.claude/settings.local.json）
