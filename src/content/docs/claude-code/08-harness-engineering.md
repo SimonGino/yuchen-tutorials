@@ -7,9 +7,9 @@ sidebar:
 
 ![Harness Engineering：从 Prompt 到系统](/images/claude-code/08-harness-engineering.png)
 
-这是 Claude Code 系列的第七篇。和前面六篇不一样，这篇不教你任何新的命令或配置。它做的事情是：**给你过去六篇学到的所有东西一个统一的理论框架**。
+这是 Claude Code 系列的第八篇。和前面七篇不一样，这篇不教你任何新的命令或配置。它做的事情是：**给你过去七篇学到的所有东西一个统一的理论框架**。
 
-前六篇你做了很多事——写 CLAUDE.md、调 settings.json、装 Skills、接 MCP、管上下文。如果我问你「你在做什么」，你可能会说「在配置 Claude Code」。
+前七篇你做了很多事——写 CLAUDE.md、调 settings.json、装 Skills、接 MCP、管上下文。如果我问你「你在做什么」，你可能会说「在配置 Claude Code」。
 
 但实际上你在做的事有个更准确的名字：**Harness Engineering**。
 
@@ -27,9 +27,9 @@ sidebar:
 
 1. **理清脉络**——从 Prompt Engineering 到 Context Engineering 再到 Harness Engineering，三代演进的区别在哪
 2. **给出原则**——五条可操作的 Harness 设计原则：约束优于指令、TDD 优先、确定性逻辑外置、文件系统作为记忆、工具设计优先于提示词
-3. **回看前六篇**——你搭的那套 .claude 配置，每一层对应 Harness 的哪个组件
+3. **回看前七篇**——你搭的那套 .claude 配置，每一层对应 Harness 的哪个组件
 
-不教新命令，但读完之后你看前六篇的视角会完全不同。
+不教新命令，但读完之后你看前七篇的视角会完全不同。
 
 ## 一、三代演进：从教模型说话到给模型搭环境
 
@@ -314,15 +314,16 @@ TDD 只是验证闭环的一部分。完整的验证体系分三层：
 
 加了示例之后，工具调用准确率可以从 72% 提升到 90%。
 
-## 三、回看前六篇——你一直在做 Harness Engineering
+## 三、回看前七篇——你一直在做 Harness Engineering
 
-这可能是整篇文章最关键的一节。看看你前六篇做的事，换一个视角：
+
+这可能是整篇文章最关键的一节。看看你前七篇做的事，换一个视角：
 
 ![你一直在做 Harness Engineering](https://oss.aiqqyc.com/2026/04/c68ab5e8906121780bd0c877c3413339.png)
 
 每一篇文章教你的不是「怎么和 AI 聊天」，而是「怎么设计 AI 的工作环境」。
 
-从这个框架出发，你看前六篇的视角会完全不同：
+从这个框架出发，你看前七篇的视角会完全不同：
 
 - CLAUDE.md 不再是「配置文件」，而是 Harness 的系统提示层
 - Settings 不再是「偏好设置」，而是 Harness 的约束层
@@ -336,7 +337,7 @@ TDD 只是验证闭环的一部分。完整的验证体系分三层：
 
 ### 完整布局参考
 
-下面是一个可以直接抄的项目级 Harness 完整布局，覆盖了前六篇讲的所有组件：
+下面是一个可以直接抄的项目级 Harness 完整布局，覆盖了前七篇讲的所有组件：
 
 ```text
 your-project/
