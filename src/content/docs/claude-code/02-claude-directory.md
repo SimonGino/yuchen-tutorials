@@ -37,7 +37,7 @@ your-project/                          # 项目级（提交到 Git，团队共�
     │   ├── testing.md
     │   └── api-conventions.md
     ├── skills/                        # 可复用技能包 → 第四篇详解
-    ├── agents/                        # 自定义 AI 角色 → 第七篇详解
+    ├── agents/                        # 自定义 AI 角色
     └── output-styles/                 # 自定义输出风格
 
 ~/.claude/                             # 用户级（本地，跨项目生效）
@@ -58,7 +58,7 @@ your-project/                          # 项目级（提交到 Git，团队共�
 - **能力层**（让 Claude 做更多事）：skills/、hooks、agents/ —— 后续专题详解
   - `skills/`：把重复操作封装成一键命令 → 第四篇
   - `hooks`：文件修改后自动跑 lint、提交前自动检查 → 第六篇
-  - `agents/`：定义专用 AI 角色，Code Review Agent、Test Agent → 第七篇
+  - `agents/`：定义专用 AI 角色，Code Review Agent、Test Agent
 
 今天这篇走完知识层和行为层。能力层先认个脸，知道有这些能力就行，不展开。
 
@@ -124,7 +124,7 @@ CLAUDE.md 支持多层级，各层的内容是**拼接加载**的，不是覆盖
 - ❌ 已经在 linter / formatter 配置里的东西（别重复）
 - ❌ 大量低频任务知识（放到 Skills 里按需加载）
 
-**控制在 200 行以内。** Anthropic 官方自己的 CLAUDE.md 大约只有 2.5K tokens。写太长反而会挤占上下文空间，导致 Claude 对后续对话的响应质量下降——这个在第八篇上下文工程会详细讲。
+**控制在 200 行以内。** Anthropic 官方自己的 CLAUDE.md 大约只有 2.5K tokens。写太长反而会挤占上下文空间，导致 Claude 对后续对话的响应质量下降——这个在第七篇上下文工程会详细讲。
 
 ## 3. CLAUDE.md 实战模板
 
